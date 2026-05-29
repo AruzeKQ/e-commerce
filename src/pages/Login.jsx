@@ -12,11 +12,13 @@ export default function Login() {
                 <input
                     type="email"
                     placeholder="Nhập email"
+                    required
                 />
 
                 <input
                     type="password"
                     placeholder="Nhập mật khẩu"
+                    required
                 />
 
                 <button type="submit">
