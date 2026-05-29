@@ -1,0 +1,47 @@
+.product-detail {
+    display: flex;
+
+    gap: 40px;
+
+    padding: 40px;
+
+    flex-wrap: wrap;
+}
+
+.detail-image img {
+    width: 350px;
+
+    border-radius: 15px;
+}
+
+.detail-content {
+    max-width: 500px;
+}
+
+.detail-content h1 {
+    margin-bottom: 20px;
+}
+
+.detail-content p {
+    font-size: 18px;
+
+    margin-bottom: 20px;
+}
+
+.detail-content h2 {
+    color: crimson;
+
+    margin-bottom: 20px;
+}
+
+.detail-content button {
+    padding: 15px 25px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}

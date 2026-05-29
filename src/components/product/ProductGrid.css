@@ -1,7 +1,0 @@
-.product-list {
-    display: flex;
-    flex-wrap: wrap;
-    /* Cho phép xuống dòng */
-    gap: 20px;
-    justify-content: center;
-}

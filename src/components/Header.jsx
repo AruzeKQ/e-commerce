@@ -15,9 +15,9 @@ export default function Header() {
 
             {/* Các Router Link nằm trong Header */}
             <nav className="navigation">
-                <NavLink to="/" activeClassName="active">Trang chủ</NavLink>
-                <NavLink to="/products" activeClassName="active">Sản phẩm</NavLink>
-                <NavLink to="/about" activeClassName="active">Giới thiệu</NavLink>
+                <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Trang chủ</NavLink>
+                <NavLink to="/products" className={({ isActive }) => isActive ? "active" : ""}>Sản phẩm</NavLink>
+                <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>Giới thiệu</NavLink>
             </nav>
 
             <div className='search'>

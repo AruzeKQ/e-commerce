@@ -1,5 +1,4 @@
-import ProductCard from "./ProductCard"
-import './ProductGrid.css'
+import './Products.css'
 
 const mockData = [
     {
@@ -44,16 +43,40 @@ const mockData = [
         price: "300.000",
         quantity: 1,
     }
-
 ]
 
-export default function ProductGrid() {
+export default function Products() {
 
     return (
         <div className="product-list">
-            {mockData.length > 0 && mockData.map((product) =>
-                <ProductCard key={product.id} product={product} />
-            )}
+
+            {mockData.map((product) => (
+
+                <div className="card-container" key={product.id}>
+
+                    <img
+                        src={product.img}
+                        alt={product.name}
+                    />
+
+                    <div className="product-infor">
+
+                        <h2>{product.name}</h2>
+
+                        <p className='product-price'>
+                            Giá: {product.price} VNĐ
+                        </p>
+
+                        <p className='product-quantity'>
+                            Số lượng: {product.quantity}
+                        </p>
+
+                    </div>
+
+                </div>
+
+            ))}
+
         </div>
     )
 }
