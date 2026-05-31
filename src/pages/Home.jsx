@@ -16,7 +16,7 @@ export default function Home() {
                 <h1>Sàn E-Com của anh Kếu đẹp trai</h1>
 
                 <p>
-                    Best product with high Price hehehe !!!
+                    The worst product with high Price hehehe !!!
                 </p>
 
                 <button onClick={handleChangeComponent}>Mua ngay</button>

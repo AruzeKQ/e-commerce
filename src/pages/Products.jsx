@@ -1,4 +1,5 @@
 import './Products.css'
+import { useNavigate } from 'react-router-dom'
 
 const mockData = [
     {
@@ -45,14 +46,23 @@ const mockData = [
     }
 ]
 
+
 export default function Products() {
+
+    const navigate = useNavigate()
+    const detailProduct = (id) => {
+        navigate(`/products/${id}`)
+    }
 
     return (
         <div className="product-list">
 
             {mockData.map((product) => (
 
-                <div className="card-container" key={product.id}>
+                <div
+                    className="card-container"
+                    key={product.id}
+                    onClick={() => detailProduct(product.id)}>
 
                     <img
                         src={product.img}
@@ -72,6 +82,8 @@ export default function Products() {
                         </p>
 
                     </div>
+
+
 
                 </div>
 
