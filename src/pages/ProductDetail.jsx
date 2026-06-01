@@ -2,9 +2,15 @@ import { useParams } from "react-router-dom"
 
 import './ProductDetail.css'
 
+import { mockData } from "../mockdata/MockData"
+
 export default function ProductDetail() {
 
     const { id } = useParams()
+
+    const product = mockData.find((item) => item.id === String(id))
+
+    // console.log(product)
 
     return (
         <div className="product-detail">
@@ -20,15 +26,13 @@ export default function ProductDetail() {
 
             <div className="detail-content">
 
-                <h1>Product ID: {id}</h1>
+                <h1>Product ID: {product.id}</h1>
 
                 <p>
-                    Trendy Queen Womens Off the Shoulder
-                    Tops Oversized Summer Spring T-Shirts
-                    2026
+                    {product.name}
                 </p>
 
-                <h2>300.000 VNĐ</h2>
+                <h2>{product.price} VNĐ</h2>
 
                 <button>Thêm vào giỏ hàng</button>
 
