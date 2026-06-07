@@ -13,6 +13,7 @@ const initialState = {
 
 
 const countReducer = (state, action) => {
+    console.log(state)
     switch (action.type) {
         case "ADD_TO_CART":
             const existingItem = state.cart.find(
@@ -30,10 +31,13 @@ const countReducer = (state, action) => {
                     )
                 }
             } else {
-                return [
-                    ...state.cart,
-                    action.payload
-                ]
+                return {
+                    ...state,
+                    cart: [
+                        ...state.cart,
+                        action.payload
+                    ]
+                }
             }
         default:
             return state

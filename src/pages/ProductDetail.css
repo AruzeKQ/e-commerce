@@ -1,11 +1,18 @@
 .product-detail {
+
+    width: 100%;
+
     display: flex;
 
     gap: 40px;
 
-    padding: 40px;
+    padding: 20px;
 
     flex-wrap: wrap;
+
+    box-sizing: border-box;
+
+    border: 1px solid;
 }
 
 .detail-image img {
