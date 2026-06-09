@@ -1,14 +1,18 @@
+import { useReducer, useContext } from "react"
+
 import { useParams } from "react-router-dom"
 
 import './ProductDetail.css'
 
 import { mockData } from "../mockdata/MockData"
 
-import { useReducer } from "react";
+import { cartReducer, initialState } from "../reducer/CartReducer"
+
+import { CartContext } from "../context/CartContext"
 
 export default function ProductDetail() {
-    const [state, dispatch] = useReducer(countReducer, initialState)
-
+    // const [state, dispatch] = useReducer(cartReducer, initialState)
+    const { dispatch } = useContext(CartContext) // dùng chung dispatch để re-render khi add thêm item
     // console.log(state)
 
     const { id } = useParams()

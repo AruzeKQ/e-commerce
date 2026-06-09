@@ -3,6 +3,7 @@ export const initialState = {
 };
 
 export const cartReducer = (state, action) => {
+    console.log(state)
     switch (action.type) {
         case "ADD_TO_CART":
             const existingItem = state.cart.find(

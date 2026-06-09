@@ -1,8 +1,16 @@
 import { Link, NavLink } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 import logo from "./logo.jpg"
 import './Header.css'
+import { useContext } from 'react';
+
 
 export default function Header() {
+    const { cart } = useContext(CartContext)
+    const totalItem = cart.reduce(
+        (sum, item) => { return sum + item.quantity }
+        , 0
+    )
     return (
         <header className="header">
 
@@ -35,7 +43,7 @@ export default function Header() {
                 </div>
 
                 <div className='cart-icon'>
-                    <Link to="/cart">Giỏ hàng (0)</Link>
+                    <Link to="/cart">Giỏ hàng ({totalItem})</Link>
                 </div>
 
             </div>
