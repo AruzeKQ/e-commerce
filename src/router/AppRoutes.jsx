@@ -9,6 +9,7 @@ import About from "../pages/About"
 import Login from "../pages/Login"
 import Register from "../pages/Register"
 import NotFound from "../pages/NotFound"
+import ShoppingCart from "../pages/ShoppingCart"
 
 
 
@@ -43,6 +44,11 @@ export default function AppRoutes() {
                 <Route
                     path="register"
                     element={<Register />}
+                />
+
+                <Route
+                    path="cart"
+                    element={<ShoppingCart />}
                 />
 
             </Route>
